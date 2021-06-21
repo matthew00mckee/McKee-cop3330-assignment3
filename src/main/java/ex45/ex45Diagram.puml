@@ -1,0 +1,17 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+class wordFinder {
+    String input
+    String replacedString
+    String newFileName
+    replaceInput();
+    getInput();
+    createOutputFile();
+}
+class FileReader {
+    getInput();
+}
+
+wordFinder <|-- FileReader
+@enduml

@@ -1,0 +1,25 @@
+/*
+ *  UCF COP3330 Summer 2021 Assignment 3 Solution
+ *  Copyright 2021 Matthew McKee
+ */
+
+@startuml
+'https://plantuml.com/sequence-diagram
+
+class parseData {
+    ArrayList<String> initialInput
+    ArrayList<Map<String,String>> data
+    output();
+}
+class fileReader {
+    getInput();
+}
+class dataParser {
+    int length
+    HashMap<String, String> newMap
+    removeCommas();
+    waitUntilComma();
+}
+parseData <|-- fileReader
+parseData <|-- dataParser
+@enduml

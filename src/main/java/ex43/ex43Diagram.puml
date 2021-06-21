@@ -1,0 +1,31 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+class Input{
+String siteName
+String Author
+String js
+String css
+}
+
+class main{
+Input(SiteName)
+Input(Author)
+Input(js)
+Input(css)
+
+webGen()
+}
+
+class webGen{
+findWorkingDirectory()
+createFolderInDirectory()
+createHTMLFile()
+if (y) create a js file
+if (y) create a css file
+}
+
+Input ----|> webGen
+webGen ----|> main
+
+@enduml
