@@ -5,9 +5,8 @@
 
 package ex43;
 
-import java.io.File;
 import java.util.Scanner;
-import java.io.*;
+
 
 import static ex43.fileMaker.webGen;
 

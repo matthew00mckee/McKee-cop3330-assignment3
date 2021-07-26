@@ -12,7 +12,7 @@ import java.util.Scanner;
 
 public class fileMaker {
     private static final Scanner in = new Scanner(System.in);
-    public static void webGen(String css, String js, String author, String siteName) {
+    public static boolean webGen(String css, String js, String author, String siteName) {
         //declare and find current working directory
         String webPath;
         webPath = System.getProperty("user.dir");
@@ -35,10 +35,10 @@ public class fileMaker {
                 FileWriter myWriter = new FileWriter(webPath + "\\index.html");
 
                 //write html code displaying siteName for the title and author inside of the meta tag
-                myWriter.write("< html>\n<html lang=\"en\">\n<head>\n");
-                myWriter.write("\t<meta author=\"" + author + "\">\n");
-                myWriter.write("\t<title>" + siteName + "</title>\n");
-                myWriter.write("</head>\n<body>\n\n</body>\n</html>");
+                myWriter.write("< html>\n<html lang=\"en\">\n\t<head>\n");
+                myWriter.write("\t\t<meta author=\"" + author + "\">\n");
+                myWriter.write("\t\t<title>" + siteName + "</title>\n\t");
+                myWriter.write("</head>\n\t<body>\n\t</body>\n</html>");
 
                 //close writer
                 myWriter.close();
@@ -79,5 +79,6 @@ public class fileMaker {
             System.out.println("Website folder not created!!");
         }
         in.close();
+        return websiteCreated;
     }
 }

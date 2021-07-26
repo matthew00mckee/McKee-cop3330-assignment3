@@ -14,7 +14,7 @@ class parseDataTest extends TestCase {
     @Test
     void waitUntilComma1() {
         fileReader myReader = new fileReader();
-        parseData myParser = new parseData();
+        dataParser myParser = new dataParser();
 
         ArrayList<String> initial = new ArrayList<>();
         initial = myReader.getInput(initial);
@@ -28,7 +28,7 @@ class parseDataTest extends TestCase {
     @Test
     void waitUntilComma2() {
         fileReader myReader = new fileReader();
-        parseData myParser = new parseData();
+        dataParser myParser = new dataParser();
 
         ArrayList<String> initial = new ArrayList<>();
         initial = myReader.getInput(initial);
@@ -42,7 +42,7 @@ class parseDataTest extends TestCase {
     @Test
     void waitUntilComma3() {
         fileReader myFileReader = new fileReader();
-        parseData myDataParser = new parseData();
+        dataParser myDataParser = new dataParser();
 
         ArrayList<String> initial = new ArrayList<>();
         initial = myFileReader.getInput(initial);

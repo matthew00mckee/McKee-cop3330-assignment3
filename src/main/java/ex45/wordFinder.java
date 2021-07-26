@@ -37,9 +37,7 @@ public class wordFinder {
             String path = "./src/main/java/ex45/" + newFileName + ".txt";
             File page = new File(path);
             if (page.createNewFile()) {
-                //if file was successfully made
                 try {
-                    //write to the file
                     FileWriter myWriter = new FileWriter(path);
                     myWriter.write(replacedString);
                     myWriter.close();
@@ -60,7 +58,7 @@ public class wordFinder {
         return input.nextLine();
     }
 
-    public String replaceInput(String input) {
+    public static String replaceInput(String input) {
         return input.replaceAll("utilize", "use");
     }
 }

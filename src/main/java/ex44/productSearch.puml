@@ -1,0 +1,28 @@
+@startuml
+
+class mainController {
+Scanner in: scans user input to search for product.
+}
+
+class json {
+{method} read(filePath)
+{method} search(filePath, list of employees)
+import Gson to read JSON files
+File file: object created from filePath
+JsonElement: parses entire file into an element
+JsonObject: turns element into an object to extract data
+JsonArray: to read data as JSON file contains an array
+}
+
+mainController -> json: > path for exercise44_input.json
+mainController *-- productSearch: list of products
+json --> productSearch: > entire list of products
+mainController --> json: > user input to search for product
+json --> productSearch: > details of matching product from searching
+
+class productSearch {
+String name
+Double price
+int quantity
+}
+@enduml

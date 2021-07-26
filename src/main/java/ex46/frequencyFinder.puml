@@ -1,0 +1,28 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class App {
+Prints words and their frequency
+}
+
+class sortText {
+comparator
+}
+
+class text {
+scan(filePath): scans input file and return ArrayList of Maps
+ print(ArrayList<Map<String, Integer>>): scans ArrayList of Maps and prints names with their frequencies
+File file:
+ArrayList<Map<String, Integer>>
+Map<String, Integer>
+DoesArrayexist
+
+If name exists: frequency +1
+If name does not exist: sets frequency as 1 and put value into ArrayList of Maps
+}
+
+App -> text: > exercise46
+text -> sortText: > unsorted arraylist
+sortText -> text: > sorted based on name frequencies
+text -> App: > String of names and their frequencies
+@enduml

@@ -10,14 +10,14 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class fileReader {
-    public String getInput(String input) {
-        try { //try and input while file is readable
-            File myFile = new File("./src/main/java/ex45/ex45_input.txt");
-            Scanner in = new Scanner(myFile);
-            while (in.hasNextLine()) { //add lines to input
-                input += in.nextLine() + "\n";
+    public static String getInput(String input) {
+        try {
+            File myFile = new File("C:\\COP3330\\McKee-cop3330-assignment3\\src\\main\\java\\ex45\\ex45_input.txt");
+            Scanner Input = new Scanner(myFile);
+            while (Input.hasNextLine()) { //add lines to input
+                input += Input.nextLine() + "\n";
             }
-            in.close();
+            Input.close();
         } catch (FileNotFoundException e) {
             System.out.println("An error occurred.");
             e.printStackTrace();
